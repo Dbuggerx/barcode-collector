@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+let app = {
   // Application Constructor
   initialize: function () {
     this.bindEvents();
@@ -37,9 +37,9 @@ var app = {
   },
   // Update DOM on a Received Event
   receivedEvent: function (id) {
-    var parentElement = document.getElementById(id);
-    var listeningElement = parentElement.querySelector('.listening');
-    var receivedElement = parentElement.querySelector('.received');
+    let parentElement = document.getElementById(id);
+    let listeningElement = parentElement.querySelector('.listening');
+    let receivedElement = parentElement.querySelector('.received');
 
     listeningElement.setAttribute('style', 'display:none;');
     receivedElement.setAttribute('style', 'display:block;');
@@ -49,3 +49,8 @@ var app = {
 };
 
 app.initialize();
+
+// Simulate the "deviceready" event
+app.onDeviceReady();
+
+export default app;
