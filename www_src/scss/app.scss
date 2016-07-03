@@ -1,0 +1,20 @@
+// Configure the material design icons font
+$mdi-font-path: '../jspm_packages/npm/mdi@1.6.50/fonts';
+@import '../../jspm_packages/npm/mdi@1.6.50/scss/materialdesignicons';
+
+// Enable "ng-cloak"
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+// Some style tweaks
+#main-container {
+  min-height: 100vh;
+}
+
+.md-prompt-input-container {
+  width: 100%;
+}
+
+// Import the app modules
+@import '../home/home';

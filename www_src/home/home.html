@@ -1,0 +1,33 @@
+<md-toolbar md-scroll-shrink id="main-toolbar">
+  <div class="md-toolbar-tools">
+    <h3>
+      <span>Barcode Collector</span>
+    </h3>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Barcode">
+      <i class="mdi mdi-barcode"></i>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="homeCtrl.showPrompt($event)" aria-label="Input">
+      <i class="mdi mdi-textbox"></i>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="More">
+      <i class="mdi mdi-dots-vertical"></i>
+    </md-button>
+  </div>
+</md-toolbar>
+<md-content flex>
+  <h1>{{homeCtrl.status}}</h1>
+  <md-list>
+    <md-list-item class="md-3-line" ng-repeat="item in todos">
+      <img ng-src="{{item.face}}" alt="{{item.who}}" class="md-avatar">
+      <div class="md-list-item-text">
+        <h3>{{item.what}}</h3>
+        <h4>{{item.who}}</h4>
+        <p>
+          {{item.notes}}
+        </p>
+      </div>
+      <md-divider inset></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>

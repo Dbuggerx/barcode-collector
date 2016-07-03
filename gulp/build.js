@@ -10,5 +10,5 @@ gulp.task('clean', done => {
 });
 
 gulp.task('build', done => {
-  runSeq('clean', ['build-html', 'build-js'], done);
+  runSeq('clean', ['build-css', 'build-html', 'build-js'], done);
 });

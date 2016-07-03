@@ -17,9 +17,9 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
-    <head>
-        <!--
+<html lang="en">
+  <head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,30 +28,26 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com ws://localhost:3000 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-        <!-- build:css -->
-        <link rel="stylesheet" href="app.css">
-        <!-- endbuild -->
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <!-- build:js -->
-        <script src="../jspm_packages/system.js"></script>
-        <script src="../config.js"></script>
-        <script>
-          System.import('app').catch(console.error.bind(console));
-        </script>
-        <!-- endbuild -->
-    </body>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com ws://localhost:3000 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Hello World</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="app.css">
+    <!-- endbuild -->
+  </head>
+  <body class="ng-cloak">
+    <div layout="column" id="main-container">
+      <div ui-view="" autoscroll="true"></div>
+    </div>
+
+    <!-- build:js -->
+    <script src="../jspm_packages/system.js"></script>
+    <script src="../config.js"></script>
+    <script>
+      System.import('app').catch(console.error.bind(console));
+    </script>
+    <!-- endbuild -->
+  </body>
 </html>
