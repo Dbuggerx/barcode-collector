@@ -50,7 +50,11 @@ let app = {
 
 app.initialize();
 
-// Simulate the "deviceready" event
-app.onDeviceReady();
+// Cordova uses the file protocol, instead of http
+const isCordovaApp = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+if (!isCordovaApp) {
+  // Simulate the "deviceready" event in the browser
+  app.onDeviceReady();
+}
 
 export default app;
