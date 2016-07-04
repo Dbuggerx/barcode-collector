@@ -200,6 +200,8 @@
     "spaced-comment": [1, "always"], // require or disallow a space immediately following the // in a line comment (off by default)
     "wrap-regex": 0, // require regex literals to be wrapped in parentheses (off by default)
     "require-jsdoc": 0,
+    "max-statements-per-line": 0,
+    "no-negated-condition": 0,
 
     //
     // ECMAScript 6
@@ -208,5 +210,11 @@
     //
     "no-var": 2, // require let or const instead of var (off by default)
     "generator-star-spacing": [2, "before"], // enforce the spacing around the * in generator functions (off by default)
+
+    //
+    // AngularJS
+    //
+    "angular/di": 0,
+    "angular/document-service": 0
   }
 }

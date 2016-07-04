@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.danilocestari.barcodecollector"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.danilocestari.barcodecollector"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.danilocestari.barcodecollector"
+        }
+    }
 }

@@ -1,4 +1,5 @@
 /* eslint one-var: 0, "max-len": 0, max-nested-callbacks: 0*/
+
 import module from './home.module';
 import 'angular-mocks';
 
@@ -32,7 +33,6 @@ describe('Home', () => {
   describe('Controller', () => {
     let $scope, makeController;
     beforeEach(angular.mock.inject((_$rootScope_, _$controller_) => {
-      $scope = _$rootScope_.$new();
       makeController = () => _$controller_('HomeController', {
         $scope
       });

@@ -4,3 +4,4 @@ platforms
 www/*
 *.css
 templates.js
+plugins

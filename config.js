@@ -22,6 +22,8 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.23",
+    "davidshimjs/qrcodejs": "github:davidshimjs/qrcodejs@master",
+    "jsbarcode": "npm:jsbarcode@3.3.14",
     "mdi": "npm:mdi@1.6.50",
     "github:angular-ui/angular-ui-router-bower@0.3.1": {
       "angular": "github:angular/bower-angular@1.5.7"
@@ -47,11 +49,17 @@ System.config({
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.6.0"
     },
+    "github:jspm/nodelibs-events@0.1.1": {
+      "events": "npm:events@1.0.2"
+    },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
       "process": "npm:process@0.11.5"
+    },
+    "github:jspm/nodelibs-stream@0.1.0": {
+      "stream-browserify": "npm:stream-browserify@1.0.0"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
@@ -76,14 +84,51 @@ System.config({
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:canvas@1.4.0": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "nan": "npm:nan@2.3.5",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:commander@2.9.0": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "graceful-readlink": "npm:graceful-readlink@1.0.1",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:core-js@1.2.6": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
+    "npm:core-util-is@1.0.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:graceful-readlink@1.0.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:jsbarcode@3.3.14": {
+      "canvas": "npm:canvas@1.4.0",
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "commander": "npm:commander@2.9.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:nan@2.3.5": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -92,6 +137,24 @@ System.config({
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "vm": "github:jspm/nodelibs-vm@0.1.0"
+    },
+    "npm:readable-stream@1.1.14": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "core-util-is": "npm:core-util-is@1.0.2",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.1",
+      "isarray": "npm:isarray@0.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "stream-browserify": "npm:stream-browserify@1.0.0",
+      "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:stream-browserify@1.0.0": {
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.1",
+      "readable-stream": "npm:readable-stream@1.1.14"
+    },
+    "npm:string_decoder@0.10.31": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",

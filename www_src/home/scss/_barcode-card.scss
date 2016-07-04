@@ -1,0 +1,7 @@
+.barcode-card {
+  flex-shrink: 0;
+
+  &__value {
+    word-wrap: break-word;
+  }
+}

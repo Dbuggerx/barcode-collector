@@ -1,3 +1,5 @@
+import BarcodeScanner from '../common/services/barcode-scanner/barcode-scanner';
+
 const privates = new WeakMap();
 
 export default class HomeController {
@@ -7,6 +9,17 @@ export default class HomeController {
     privates.set(this, {
       $mdDialog
     });
+
+    this.barcodes = [{
+      type: 'code128',
+      value: '111111'
+    }, {
+      type: 'upc',
+      value: '123456789012'
+    }, {
+      type: 'qrcode',
+      value: 'testing'
+    }];
   }
 
   showPrompt(ev) {
@@ -21,9 +34,19 @@ export default class HomeController {
       .cancel('Cancel');
     me.$mdDialog.show(confirm)
       .then(result => {
-        this.status = `Result: ${result}`;
-      }, () => {
-        this.status = 'Cancelled!';
+        this.status = `Input Result: ${result}`;
+      })
+      .catch(err => {
+        this.status = `Input Cancelled! ${err}`;
       });
+  }
+
+  scanBarcode() {
+    BarcodeScanner.scan().then(result => {
+      this.status = `Scan Result: ${result.text}`;
+    })
+    .catch(err => {
+      this.status = `Barcode Cancelled! ${err}`;
+    });
   }
 }

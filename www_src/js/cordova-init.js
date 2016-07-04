@@ -1,3 +1,5 @@
+/* eslint angular/document-service: 0, angular/log: 0 */
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

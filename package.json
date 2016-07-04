@@ -51,6 +51,8 @@
       "angular-mocks": "github:angular/bower-angular-mocks@^1.5.7",
       "angular-ui-router": "github:angular-ui/angular-ui-router-bower@^0.3.1",
       "css": "github:systemjs/plugin-css@^0.1.23",
+      "davidshimjs/qrcodejs": "github:davidshimjs/qrcodejs@master",
+      "jsbarcode": "npm:jsbarcode@^3.3.14",
       "mdi": "npm:mdi@^1.6.50"
     },
     "devDependencies": {
