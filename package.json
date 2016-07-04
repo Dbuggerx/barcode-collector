@@ -4,7 +4,8 @@
   "description": "Sample application to read and collect barcode data",
   "main": "app.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "deploy": "gulp build && cordova run"
   },
   "author": "Danilo Cestari",
   "license": "ISC",
@@ -53,7 +54,8 @@
       "css": "github:systemjs/plugin-css@^0.1.23",
       "davidshimjs/qrcodejs": "github:davidshimjs/qrcodejs@master",
       "jsbarcode": "npm:jsbarcode@^3.3.14",
-      "mdi": "npm:mdi@^1.6.50"
+      "mdi": "npm:mdi@^1.6.50",
+      "pouchdb": "github:pouchdb/pouchdb@^5.4.5"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

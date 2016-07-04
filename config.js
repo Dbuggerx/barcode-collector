@@ -25,6 +25,7 @@ System.config({
     "davidshimjs/qrcodejs": "github:davidshimjs/qrcodejs@master",
     "jsbarcode": "npm:jsbarcode@3.3.14",
     "mdi": "npm:mdi@1.6.50",
+    "pouchdb": "github:pouchdb/pouchdb@5.4.5",
     "github:angular-ui/angular-ui-router-bower@0.3.1": {
       "angular": "github:angular/bower-angular@1.5.7"
     },
