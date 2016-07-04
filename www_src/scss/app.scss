@@ -17,4 +17,6 @@ body {
 }
 
 // Import the app modules
+@import 'variables';
+@import 'app-body';
 @import '../home/home';

@@ -1,22 +1,38 @@
-<md-toolbar class="main-toolbar">
+<md-toolbar class="toolbar">
   <div class="md-toolbar-tools">
     <h3>
       <span>Barcode Collector</span>
     </h3>
     <span flex></span>
-    <md-button class="md-icon-button main-toolbar__button" ng-click="homeCtrl.scanBarcode()" aria-label="Barcode">
+    <md-button class="md-icon-button toolbar__button" ng-click="homeCtrl.scanBarcode()" aria-label="Barcode">
       <i class="mdi mdi-barcode"></i>
     </md-button>
-    <md-button class="md-icon-button main-toolbar__button" ng-click="homeCtrl.showPrompt($event)" aria-label="Input">
+    <md-button class="md-icon-button toolbar__button" ng-click="homeCtrl.showPrompt($event)" aria-label="Input">
       <i class="mdi mdi-textbox"></i>
     </md-button>
-    <md-button class="md-icon-button main-toolbar__button" aria-label="More">
-      <i class="mdi mdi-dots-vertical"></i>
-    </md-button>
+    <md-menu>
+      <md-button class="md-icon-button toolbar__button" aria-label="More" ng-click="homeCtrl.openMenu($mdOpenMenu, $event)">
+        <i class="mdi mdi-dots-vertical"></i>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button ng-click="homeCtrl.clearAllBarcodes()">
+          <i class="mdi mdi-delete-forever"></i>
+            Remove barcodes
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="homeCtrl.showAbout()">
+            <i class="mdi mdi-information-outline"></i>
+            About
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
   </div>
 </md-toolbar>
 
-<md-content class="md-padding" layout="column">
+<md-content class="md-padding content" layout="column">
   <md-card md-theme="default" ng-repeat="barcode in homeCtrl.barcodes" class="barcode-card">
     <md-card-title>
       <md-content layout="column" layout-fill>

@@ -4,7 +4,7 @@ import module from './home.module';
 import 'angular-mocks';
 import barcodeScanner from '../common/services/barcode-scanner/barcode-scanner';
 
-fdescribe('Home', () => {
+describe('Home', () => {
   let $mdDialog, $q, $scope, $state;
   beforeEach(() => {
     angular.mock.module(module.name);

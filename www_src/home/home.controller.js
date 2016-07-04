@@ -6,7 +6,8 @@ export default class HomeController {
   constructor($scope, $mdDialog, pouchDBService) {
     'ngInject';
 
-    const db = pouchDBService.createDb('barcodes');
+    let db;
+    const createDb = () => pouchDBService.createDb('barcodes');
     const showBarcodes = () => {
       pouchDBService.getAllFromDb(db)
         .then(barcodes => {
@@ -18,8 +19,14 @@ export default class HomeController {
             value: row.doc.value
           }));
           $scope.$digest();
+        })
+        .catch(() => {
+          this.barcodes = [];
+          db = createDb();
+          $scope.$digest();
         });
     };
+    db = createDb();
     showBarcodes();
 
     privates.set(this, {
@@ -62,6 +69,7 @@ export default class HomeController {
       },
       clearAllBarcodes() {
         pouchDBService.destroyDb(db)
+        .then(showBarcodes)
         .catch(err => {
           this.showAlert('Error deleting barcodes', err);
         });
@@ -100,5 +108,14 @@ export default class HomeController {
 
   clearAllBarcodes() {
     privates.get(this).clearAllBarcodes();
+  }
+
+  openMenu($mdOpenMenu, ev) {
+    $mdOpenMenu(ev);
+  }
+
+  showAbout() {
+    const me = privates.get(this);
+    me.showAlert('Barcode Collector', 'Developed by Danilo Cestari');
   }
 }
