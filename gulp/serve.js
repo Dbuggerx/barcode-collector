@@ -26,7 +26,7 @@ gulp.task('reload', done => {
   done();
 });
 
-gulp.task('serve', ['sass'], () => {
+gulp.task('serve', ['sass', 'templates'], () => {
   bsConfig.server.baseDir = [global.paths.src, './'];
   bs.init(bsConfig);
 

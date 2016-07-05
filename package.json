@@ -4,8 +4,10 @@
   "description": "Sample application to read and collect barcode data",
   "main": "app.js",
   "scripts": {
+    "preinstall": "npm install -g jspm && npm install -g gulp",
+    "postinstall": "jspm install",
     "test": "karma start",
-    "deploy": "gulp build && cordova run"
+    "deploy": "gulp build && cordova prepare && cordova run"
   },
   "author": "Danilo Cestari",
   "license": "ISC",
@@ -40,6 +42,7 @@
     "karma-jspm": "^2.0.2",
     "karma-phantomjs2-launcher": "^0.5.0",
     "karma-spec-reporter": "0.0.24",
+    "node-sass": "^3.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "postcss-copy": "^4.0.2",
     "require-dir": "^0.3.0",

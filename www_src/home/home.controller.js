@@ -92,7 +92,7 @@ export default class HomeController {
         me.saveBarcode(result);
       })
       .catch(err => {
-        me.showAlert('Input scan cancelled', err);
+        me.showAlert('Input cancelled', err);
       });
   }
 
